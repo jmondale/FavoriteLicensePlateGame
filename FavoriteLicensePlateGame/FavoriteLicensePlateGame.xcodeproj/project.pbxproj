@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E448C7EA1DA0618A00ED4946 /* StateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E448C7E91DA0618A00ED4946 /* StateCell.xib */; };
+		E448C7F01DA0750A00ED4946 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448C7EF1DA0750A00ED4946 /* State.swift */; };
 		E4F13D081D9D66020093A0D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F13D071D9D66020093A0D0 /* AppDelegate.swift */; };
 		E4F13D0A1D9D66020093A0D0 /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F13D091D9D66020093A0D0 /* StateViewController.swift */; };
 		E4F13D0D1D9D66020093A0D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F13D0B1D9D66020093A0D0 /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E448C7E91DA0618A00ED4946 /* StateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateCell.xib; sourceTree = "<group>"; };
+		E448C7EF1DA0750A00ED4946 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = State.swift; path = ../State.swift; sourceTree = "<group>"; };
 		E4F13D041D9D66020093A0D0 /* FavoriteLicensePlateGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoriteLicensePlateGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F13D071D9D66020093A0D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F13D091D9D66020093A0D0 /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
@@ -58,8 +58,8 @@
 			children = (
 				E4F13D071D9D66020093A0D0 /* AppDelegate.swift */,
 				E4F13D091D9D66020093A0D0 /* StateViewController.swift */,
+				E448C7EF1DA0750A00ED4946 /* State.swift */,
 				E4F13D0B1D9D66020093A0D0 /* Main.storyboard */,
-				E448C7E91DA0618A00ED4946 /* StateCell.xib */,
 				E4F13D0E1D9D66020093A0D0 /* Assets.xcassets */,
 				E4F13D101D9D66020093A0D0 /* LaunchScreen.storyboard */,
 				E4F13D131D9D66020093A0D0 /* Info.plist */,
@@ -130,7 +130,6 @@
 				E4F13D121D9D66020093A0D0 /* LaunchScreen.storyboard in Resources */,
 				E4F13D0F1D9D66020093A0D0 /* Assets.xcassets in Resources */,
 				E4F13D0D1D9D66020093A0D0 /* Main.storyboard in Resources */,
-				E448C7EA1DA0618A00ED4946 /* StateCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +142,7 @@
 			files = (
 				E4F13D0A1D9D66020093A0D0 /* StateViewController.swift in Sources */,
 				E4F13D081D9D66020093A0D0 /* AppDelegate.swift in Sources */,
+				E448C7F01DA0750A00ED4946 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

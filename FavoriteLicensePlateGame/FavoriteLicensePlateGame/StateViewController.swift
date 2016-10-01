@@ -10,6 +10,10 @@ import UIKit
 
 class StateViewController: UIViewController {
     
+    struct TableViewCellIdentifiers {
+        static let stateCell = "StateCell"
+    }
+    
     @IBOutlet weak var tableView: UITableView!
     
     var searchResults: [State] = []
@@ -18,8 +22,12 @@ class StateViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
+        tableView.rowHeight = 80
         
         createSomeFakeData()
+        
+        let cellNib = UINib(nibName: TableViewCellIdentifiers.stateCell, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.stateCell)
     }
     
     func createSomeFakeData() {
@@ -40,18 +48,16 @@ extension StateViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "SearchResultCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.stateCell, for: indexPath) as! StateCell
         
-        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        
-        if cell == nil {
-            cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIdentifier)
+        if searchResults.count == 0 {
+            cell.nameLabel.text = "(Nothing found)"
+            cell.artistNameLabel.text = ""
+        } else {
+            let searchResult = searchResults[indexPath.row]
+            cell.nameLabel.text = searchResult.name
+            cell.artistNameLabel.text = searchResult.artistName
         }
-        
-        let state = searchResults[indexPath.row]
-        cell.textLabel!.text = state.name
-        cell.detailTextLabel!.text = state.artistName
-        
         return cell
     }
 }
